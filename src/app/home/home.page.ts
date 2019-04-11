@@ -18,21 +18,21 @@ export class HomePage {
     this.operacao = oper;
     if (this.operacao === 'menos'){
       this.resultado = this.valor1 - this.valor2;
-      alert(this.resultado);
+      //alert(this.resultado);
     }
     if (this.operacao === 'soma') {
       this.resultado = Number(this.valor1) + Number(this.valor2);
-      alert(this.resultado);
+      //alert(this.resultado);
     }
 
     if (this.operacao === 'divisao') {
       this.resultado = this.valor1 / this.valor2;
-      alert(this.resultado);
+      //alert(this.resultado);
     }
 
     if (this.operacao === 'vezes') {
       this.resultado = this.valor1 * this.valor2;
-      alert(this.resultado);
+      //alert(this.resultado);
     }
 
   }

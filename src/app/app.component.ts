@@ -19,6 +19,11 @@ export class AppComponent {
       title: 'Desenvolvedores',
       url: '/list',
       icon: 'person'
+    },
+    {
+      title:'Instruções',
+      url: '/instrucoes',
+      icon: 'md-information-circle'
     }
   ];
 

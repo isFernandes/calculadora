@@ -10,12 +10,13 @@
 </ion-header>
 
 <ion-content padding="true">
-  <ion-label>Insira o primeiro valor: </ion-label>
-  <ion-input placeholder="FIRST VALUE" [(ngModel)]='valor1'></ion-input>
-  <ion-label>Insira o segundo valor: </ion-label>
-  <ion-input placeholder="SECOND VALUE" [(ngModel)]='valor2'></ion-input>
-  
-  <ion-label> 21541 </ion-label>
+  <div>
+    <ion-label>Insira o primeiro valor: </ion-label>
+    <ion-input placeholder="FIRST VALUE" [(ngModel)]='valor1'></ion-input>
+    <ion-label>Insira o segundo valor: </ion-label>
+    <ion-input placeholder="SECOND VALUE" [(ngModel)]='valor2'></ion-input>
+  </div>
+  <ion-label [(ngModel)]='resultado' id="resultado"> {{ resultado }} </ion-label>
   <div>
     <ion-grid>
         <ion-row>
