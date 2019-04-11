@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Calculadora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding="true">
+  <ion-label>Insira o primeiro valor: </ion-label>
+  <ion-input placeholder="FIRST VALUE" [(ngModel)]='valor1'></ion-input>
+  <ion-label>Insira o segundo valor: </ion-label>
+  <ion-input placeholder="SECOND VALUE" [(ngModel)]='valor2'></ion-input>
+  
+  <ion-label> 21541 </ion-label>
+  <div>
+    <ion-grid>
+        <ion-row>
+            <ion-col>C</ion-col>
+            <ion-col>+/-</ion-col>
+            <ion-col>%</ion-col>
+            <ion-col>DELETE</ion-col>
+        </ion-row>
+      <ion-row>
+        <ion-col>7</ion-col>
+        <ion-col>8</ion-col>
+        <ion-col>9</ion-col>
+        <ion-col>
+          <ion-button class="operation" (click)="onChangeValue('soma')"> + </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>4</ion-col>
+          <ion-col>5</ion-col>
+          <ion-col>6</ion-col>
+          <ion-col>
+            <ion-button class="operation" (click)="onChangeValue('menos')"> - </ion-button>
+            </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>1</ion-col>
+          <ion-col>2</ion-col>
+          <ion-col>3</ion-col>
+          <ion-col>
+            <ion-button class="operation" (click)="onChangeValue('divisao')"> / </ion-button>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>0</ion-col>
+          <ion-col>,</ion-col>
+          <ion-col>=</ion-col>
+          <ion-col>
+              <ion-button class="operation" (click)="onChangeValue('vezes')"> * </ion-button>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div>
+
+  </div>
+
+</ion-content>
