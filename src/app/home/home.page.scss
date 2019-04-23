@@ -1,3 +1,7 @@
+ion-grid{
+  color: crimson;
+}
+
 .welcome-card ion-img {
   max-height: 35vh;
   overflow: hidden;
@@ -10,7 +14,7 @@
 }
 
 #resultado{
-  font-size: 30px;
-  background-color: crimson;
-  margin: 50%;
+  opacity: 0.8;
+  border-radius: 5px;
+  font-size: 25px;
 }

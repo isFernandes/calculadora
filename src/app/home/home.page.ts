@@ -13,29 +13,37 @@ export class HomePage {
   valor2 = 0;
   resultado = 0;
   operacao = '';
+  entrada = 0;
   constructor(public navCtrl: NavController) { }
+  
+  //receber os inputs e calcular
   onChangeValue(oper) {
     this.operacao = oper;
-    if (this.operacao === 'menos'){
+    if (this.operacao === 'menos') {
       this.resultado = this.valor1 - this.valor2;
-      //alert(this.resultado);
     }
     if (this.operacao === 'soma') {
       this.resultado = Number(this.valor1) + Number(this.valor2);
-      //alert(this.resultado);
     }
 
     if (this.operacao === 'divisao') {
       this.resultado = this.valor1 / this.valor2;
-      //alert(this.resultado);
     }
 
     if (this.operacao === 'vezes') {
       this.resultado = this.valor1 * this.valor2;
-      //alert(this.resultado);
     }
 
   }
+
+  //limpar os inputs
+  clearInput(validacao){
+    if (validacao === 'del') {
+      alert('delete');
+    }
+  }
+
+  //teclado receber o valor do teclado e adc ao input 
 
   /*onChangeValue(valor) {
     if (valor1 == '') {
@@ -52,5 +60,4 @@ export class HomePage {
   Result() {
 
   }*/
-  
 }

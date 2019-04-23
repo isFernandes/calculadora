@@ -12,39 +12,40 @@
 <ion-content padding="true">
   <div>
     <ion-label>Insira o primeiro valor: </ion-label>
-    <ion-input placeholder="FIRST VALUE" [(ngModel)]='valor1'></ion-input>
+    <ion-input [(ngModel)]='valor1'></ion-input>
     <ion-label>Insira o segundo valor: </ion-label>
-    <ion-input placeholder="SECOND VALUE" [(ngModel)]='valor2'></ion-input>
+    <ion-input [(ngModel)]='valor2'></ion-input>
   </div>
-  <ion-label [(ngModel)]='resultado' id="resultado"> {{ resultado }} </ion-label>
+  <ion-label [(ngModel)]='resultado' id="resultado">Resultado: {{  resultado  }} </ion-label>
+  <br>
   <div>
     <ion-grid>
         <ion-row>
             <ion-col>C</ion-col>
             <ion-col>+/-</ion-col>
             <ion-col>%</ion-col>
-            <ion-col>DELETE</ion-col>
+            <ion-col (click)="clearInput('del')">DELETE</ion-col>
         </ion-row>
       <ion-row>
-        <ion-col>7</ion-col>
-        <ion-col>8</ion-col>
-        <ion-col>9</ion-col>
+        <ion-col (click)="teclado(7)">7</ion-col>
+        <ion-col (click)="teclado(8)">8</ion-col>
+        <ion-col (click)="teclado(9)">9</ion-col>
         <ion-col>
           <ion-button class="operation" (click)="onChangeValue('soma')"> + </ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
-          <ion-col>4</ion-col>
-          <ion-col>5</ion-col>
-          <ion-col>6</ion-col>
+          <ion-col (click)="teclado(4)">4</ion-col>
+          <ion-col (click)="teclado(5)">5</ion-col>
+          <ion-col (click)="teclado(6)">6</ion-col>
           <ion-col>
             <ion-button class="operation" (click)="onChangeValue('menos')"> - </ion-button>
             </ion-col>
       </ion-row>
       <ion-row>
-          <ion-col>1</ion-col>
-          <ion-col>2</ion-col>
-          <ion-col>3</ion-col>
+          <ion-col (click)="teclado(1)">1</ion-col>
+          <ion-col (click)="teclado(2)">2</ion-col>
+          <ion-col (click)="teclado(3)">3</ion-col>
           <ion-col>
             <ion-button class="operation" (click)="onChangeValue('divisao')"> / </ion-button>
           </ion-col>
